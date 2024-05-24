@@ -7,10 +7,7 @@ use CodeIgniter\Model;
 class Model_home extends Model
 {
 
-    public function tot_arsip()
-    {
-        return $this->db->table('tbl_arsip')->countAll();
-    }
+    
 
     public function tot_karyawan()
     {

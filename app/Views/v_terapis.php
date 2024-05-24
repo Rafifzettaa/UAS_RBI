@@ -73,12 +73,16 @@
                 ?>
 
                 <div class="form-group">
-                    <label>Nama Layanan</label>
-                    <input name="nama_layanan" class="form-control" placeholder="Nama Layanan" required>
+                    <label>Kode Terapis</label>
+                    <input name="kd_terapis" class="form-control" placeholder="Masukkan Kode" required>
                 </div>
                 <div class="form-group">
-                    <label>Harga</label>
-                    <input name="harga" class="form-control" placeholder="Harga Layanan" required>
+                    <label>Nama Terapis</label>
+                    <input name="nama_terapis" class="form-control" placeholder="Nama Terapis" required>
+                </div>
+                <div class="form-group">
+                    <label>No Telpon</label>
+                    <input type="number" name="no_tlp" class="form-control" placeholder="Nomor Telepon" required>
                 </div>
 
             </div>
@@ -119,6 +123,11 @@
                     <label>Nama Terapis</label>
                     <input name="nama_terapis" value="<?= $value['nama_terapis']; ?>" class="form-control"
                         placeholder="Nama Layanan" required>
+                </div>
+                <div class="form-group">
+                    <label>Nomor Telepon</label>
+                    <input type="number" name="no_tlp" value="<?= $value['no_telepon']; ?>" class="form-control"
+                        placeholder="Nomor Telepon" required>
                 </div>
 
             </div>

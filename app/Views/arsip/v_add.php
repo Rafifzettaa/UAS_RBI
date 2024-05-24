@@ -2,9 +2,9 @@
     <div class="col-md-3">
     </div>
     <div class="col-md-6">
-        <div class="box box-primary box-solid">
+        <div class="box box-success box-solid">
             <div class="box-header with-border">
-                <h3 class="box-title">Tambah Data Layanan</h3>
+                <h3 class="box-title">Tambah Data Transaksi</h3>
                 <!-- /.box-tools -->
             </div>
             <!-- /.box-header -->
@@ -35,25 +35,38 @@
 
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label>Nama Pasien</label>
-                    <input name="nama_pasien" class="form-control" placeholder="Nama Pasien">
-                </div>
-                <div class="form-group">
-                    <label>Nama Layanan</label>
-                    <input name="nama_layanan" class="form-control" placeholder="Nama Document">
-                </div>
+                    <select name="id_pasien" class="form-control">
+                        <option value="">--Pilih Pasien--</option>
+                        <?php foreach ($pasien as $key => $value) { ?>
+                        <option value="<?= $value['id_pasien'] ?>"><?= $value['nama'] ?></option>
+                        <?php } ?>
 
-                <div class="form-group">
-                    <label>Deskripsi</label>
-                    <textarea name="deskripsi" class="form-control" rows="5"></textarea>
+                    </select>
                 </div>
-
                 <div class="form-group">
-                    <label>File</label>
-                    <input type="file" name="file_arsip" class="form-control">
-                    <label class="text-danger">File Harus Format .PDF</label>
+                    <label>Nama Terapis</label>
+                    <select name="id_terapis" class="form-control">
+                        <option value="">--Pilih Terapis--</option>
+                        <?php foreach ($terapis as $key => $value) { ?>
+                        <option value="<?= $value['id_terapis'] ?>">[<?= $value['kd_terapis']?>] <?= $value['nama_terapis'] ?></option>
+                        <?php } ?>
+
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Tanggal Transaksi</label>
+                    <input type="date" class="form-control" name="tgl_transaksi" >
+                </div>
+                <div class="form-group">
+                    <label>Jumlah</label>
+                    <input type="number" class="form-control" name="jml" >
+                </div>
+                <div class="form-group">
+                    <label>Total Harga</label>
+                    <input type="number" class="form-control" name="harga" >
                 </div>
 
                 <div class="form-group">

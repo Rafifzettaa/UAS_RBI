@@ -115,9 +115,10 @@ class User extends BaseController
             ],
             'password' => [
                 'label' => 'Password',
-                'rules' => 'required',
+                'rules' => 'required|min_length[8]|max_length[255]',
                 'errors' => [
                     'required' => '{field} Wajib Diisi !!!',
+                    'min_length' => 'Password Terlalu Pendek, Silahkan Isi Kembali!',
                 ]
             ],
             'foto' => [

@@ -4,7 +4,7 @@
         <li class="active"><a href="<?= base_url('home') ?>">Home</a></li>
         <li><a href="<?= base_url('layanan') ?>">Layanan</a></li>
         <li><a href="<?= base_url('pasien') ?>">Pasien</a></li>
-        <li><a href="<?= base_url('arsip') ?>">Riwayat Transaksi</a></li>
+        <li><a href="<?= base_url('transaksi') ?>">Riwayat Transaksi</a></li>
         <li><a href="<?= base_url('user') ?>">Admin</a></li>
         <li><a href="<?= base_url('karyawan') ?>">Data Karyawan</a></li>
     </ul>

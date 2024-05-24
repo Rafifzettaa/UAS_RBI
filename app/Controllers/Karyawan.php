@@ -30,46 +30,51 @@ class Karyawan extends BaseController
 
     public function add()
     {
-        // Mengambil data nama_dep dari form input
-        $data = array('nama_dep' => $this->request->getPost('nama_dep'));
-
-        // Menambahkan data departemen ke dalam database melalui model
-        $this->Model_dep->add($data);
+        // Mengambil data  dari form input
+        $data = array(
+            'kd_terapis' => $this->request->getPost('kd_terapis'),
+            'nama_terapis' => $this->request->getPost('nama_terapis'),
+            'no_telepon' => $this->request->getPost('no_tlp'),
+        );
+        // Menambahkan data  ke dalam database melalui model
+        $this->Model_terapis->add($data);
 
         // Set flashdata pesan berhasil dan redirect kembali ke halaman departemen
         session()->setFlashdata('pesan', 'Data Berhasil Di Tambahkan !!!');
-        return redirect()->to(base_url('dep'));
+        return redirect()->to(base_url('karyawan'));
     }
 
-    public function edit($id_dep)
+    public function edit($id_terapis)
     {
         // Mengambil data nama_dep dari form input
         $data = array(
-            'id_dep' => $id_dep,
-            'nama_dep' => $this->request->getPost('nama_dep'),
+            'id_terapis' => $id_terapis,
+            'kd_terapis' => $this->request->getPost('kd_terapis'),
+            'nama_terapis' => $this->request->getPost('nama_terapis'),
+            'no_telepon' => $this->request->getPost('no_tlp'),
         );
 
         // Mengedit data departemen dalam database melalui model
-        $this->Model_dep->edit($data);
+        $this->Model_terapis->edit($data);
 
         // Set flashdata pesan berhasil dan redirect kembali ke halaman departemen
         session()->setFlashdata('pesan', 'Data Berhasil Di Update !!!');
-        return redirect()->to(base_url('dep'));
+        return redirect()->to(base_url('karyawan'));
     }
 
-    public function delete($id_dep)
+    public function delete($id_terapis)
     {
         // Data id_dep yang akan dihapus
         $data = array(
-            'id_dep' => $id_dep,
+            'id_terapis' => $id_terapis,
         );
 
         // Menghapus data departemen dari database melalui model
-        $this->Model_dep->delete_data($data);
+        $this->Model_terapis->delete_data($data);
 
         // Set flashdata pesan berhasil dan redirect kembali ke halaman departemen
         session()->setFlashdata('pesan', 'Data Berhasil Di Hapus !!!');
-        return redirect()->to(base_url('dep'));
+        return redirect()->to(base_url('karyawan'));
     }
     //--------------------------------------------------------------------
 

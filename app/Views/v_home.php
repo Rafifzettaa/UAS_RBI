@@ -7,9 +7,9 @@
                 <p>Karyawan</p>
             </div>
             <div class="icon">
-                <i class="fa-solid fa-people-line"></i>
+            <i class="fa fa-users" aria-hidden="true"></i>
             </div>
-            <a href="<?= base_url('arsip') ?>" class="small-box-footer">View Detail <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?= base_url('karyawan') ?>" class="small-box-footer">View Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
 
@@ -32,14 +32,13 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
             <div class="inner">
-                <!-- <h3></h3> -->
+                <h3><?= $tot_transaksi; ?></h3>
 
-                <p>Departement</p>
+                <p>Total Transaksi</p>
             </div>
             <div class="icon">
-                <i class="fa fa-building-o"></i>
-            </div>
-            <a href="<?= base_url('dep') ?>" class="small-box-footer">View Detail <i class="fa fa-arrow-circle-right"></i></a>
+            <i class="fa-"></i>            </div>
+            <a href="<?= base_url('transaksi') ?>" class="small-box-footer">View Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
 

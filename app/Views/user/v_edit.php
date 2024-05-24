@@ -31,7 +31,7 @@
 
                 <div class="form-group">
                     <label>Password</label>
-                    <input name="password" value="<?= esc($user['password']) ?>" class="form-control" placeholder="Password">
+                    <input type="password" name="password" value="<?= esc($user['password']) ?>" class="form-control" placeholder="Password">
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
